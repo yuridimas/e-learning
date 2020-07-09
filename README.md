@@ -12,11 +12,12 @@ LMS (*Learning Management System*) untuk Sekolah Dasar dengan menggunakan *frame
 
 ### **Clone Project**
 1. Clone melalui Git
-2. jalankan ```composer install```
-3. *copy paste* file ```.env.example``` menjadi ```.env```
-4. jalankan ```php artisan key:generate```
-5. jalankan ```php artisan migrate:fresh --seed```
-6. Selesai
+2. jalankan `composer install`
+3. *copy paste* file `.env.example` menjadi `.env`
+4. jalankan `php artisan key:generate`
+5. buat database nama **bebas** dengan collation `utf8mb4_unicode_ci`
+6. jalankan `php artisan migrate:fresh --seed`
+7. Selesai
 
 ### **Langka awal pembuatan**
 jika tidak men-clone project
