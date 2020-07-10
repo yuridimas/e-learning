@@ -71,4 +71,26 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Assesment');
     }
+
+    public function hasRole($roles)
+    {
+        if(is_array($roles)){
+            foreach ($roles as $value) {
+                if($this->checkUserRole($value)){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public function getUserRole()
+    {
+        return $this->roles()->getResults()->name;
+    }
+
+    public function checkUserRole($role)
+    {
+        return $role == $this->getUserRole() ? true : false;
+    }
 }
